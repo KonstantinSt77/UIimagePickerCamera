@@ -12,15 +12,19 @@
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;
 
 @property (nonatomic) IBOutlet UIView *overlayView;
-@property (nonatomic, weak) IBOutlet UIBarButtonItem *takePictureButton;
-@property (nonatomic, weak) IBOutlet UIBarButtonItem *startStopButton;
-@property (nonatomic, weak) IBOutlet UIBarButtonItem *delayedPhotoButton;
-@property (nonatomic, weak) IBOutlet UIBarButtonItem *doneButton;
-@property (nonatomic) UIImagePickerController *imagePickerController;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *takePictureButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *startStopButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *delayedPhotoButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) UIImagePickerController *imagePickerController;
+@property (weak, nonatomic) IBOutlet UIViewController *myViewController;
 @property (nonatomic) NSMutableArray *capturedImages;
 @end
 
 @implementation MainViewController
+
+
+
 
 - (void)viewDidLoad
 {
@@ -41,15 +45,7 @@
 
 - (void)showImagePickerForSourceType:(UIImagePickerControllerSourceType)sourceType
 {
-//    if (self.imageView.isAnimating)
-//    {
-//        [self.imageView stopAnimating];
-//    }
-//    
-//    if (self.capturedImages.count > 0)
-//    {
-//        [self.capturedImages removeAllObjects];
-//    }
+
     
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
@@ -62,15 +58,31 @@
         imagePickerController.navigationBarHidden = YES;
         imagePickerController.toolbarHidden = YES;
         
-        //UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] initWithNibName:@"MyView" bundle:nil];
-                
-        [[NSBundle mainBundle] loadNibNamed:@"MyView" owner:self options:nil];
-        self.overlayView.frame = imagePickerController.cameraOverlayView.frame;
-        imagePickerController.cameraOverlayView = self.overlayView;
-        //self.overlayView = nil;
+    
     }
     self.imagePickerController = imagePickerController;
     [self presentViewController:self.imagePickerController animated:YES completion:nil];
+    
+    
+    
+#pragma mark Load From Nib 
+    
+//    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+//    
+//    imagePickerController.sourceType= UIImagePickerControllerSourceTypeCamera;
+//    imagePickerController.delegate= self;
+//    imagePickerController.showsCameraControls= NO;
+//    NSArray* nibViews= [[NSBundle mainBundle] loadNibNamed:@"MyView" owner:imagePickerController options:nil];
+//    UIView* uiView= [nibViews objectAtIndex:0];
+//    uiView.opaque= NO;
+//    uiView.backgroundColor= [UIColor clearColor];
+//    imagePickerController.cameraOverlayView= uiView;
+//    
+//    self.myViewController = imagePickerController;
+//    
+//    _myViewController.view.frame = [UIScreen mainScreen].applicationFrame;
+
+
 }
 
 
