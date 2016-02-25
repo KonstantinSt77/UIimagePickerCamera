@@ -1,25 +1,103 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hzg-wO-k0O">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="iCP-mE-n1u">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="hzg-wO-k0O" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0FO-q3-9to">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8cV-51-MJ4" kind="relationship" relationship="rootViewController" id="nbw-uR-db0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kwa-Mb-6JQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-240" y="499"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="1IE-nP-qGe">
+            <objects>
+                <viewController id="8cV-51-MJ4" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yOc-FD-wld"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Oe-rQ-XFq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zz3-UW-3SX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="priroda_gory_nebo_ozero_oblaka_81150_1920x1080" translatesAutoresizingMaskIntoConstraints="NO" id="EZy-kC-qhJ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="410"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHK-uU-5GO">
+                                <rect key="frame" x="0.0" y="471" width="320" height="97"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Te3-4p-5tc">
+                                        <rect key="frame" x="162" y="9" width="158" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="aE0-Vb-Yse"/>
+                                        </constraints>
+                                        <state key="normal" title="Camera">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showImagePickerForCamera:" destination="8cV-51-MJ4" eventType="touchUpInside" id="Ero-mZ-GQN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcR-qH-YqP">
+                                        <rect key="frame" x="0.0" y="4" width="140" height="89"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="89" id="ips-iH-5PD"/>
+                                        </constraints>
+                                        <state key="normal" title="Library">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showImagePickerForPhotoPicker:" destination="8cV-51-MJ4" eventType="touchUpInside" id="lmS-6F-Pt3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.49852277776101284" green="1" blue="0.58713584086788728" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="kcR-qH-YqP" firstAttribute="centerX" secondItem="RHK-uU-5GO" secondAttribute="centerX" constant="-90" id="2Wk-FU-5nJ"/>
+                                    <constraint firstItem="kcR-qH-YqP" firstAttribute="top" secondItem="RHK-uU-5GO" secondAttribute="top" constant="4" id="7zZ-Fb-Vft"/>
+                                    <constraint firstItem="Te3-4p-5tc" firstAttribute="centerX" secondItem="RHK-uU-5GO" secondAttribute="centerX" constant="81" id="F4n-XB-OWP"/>
+                                    <constraint firstAttribute="height" constant="97" id="F8f-y3-a3f"/>
+                                    <constraint firstItem="kcR-qH-YqP" firstAttribute="leading" secondItem="RHK-uU-5GO" secondAttribute="leading" id="TBa-CU-ozo"/>
+                                    <constraint firstAttribute="trailing" secondItem="Te3-4p-5tc" secondAttribute="trailing" id="onV-6c-WPx"/>
+                                    <constraint firstItem="Te3-4p-5tc" firstAttribute="top" secondItem="RHK-uU-5GO" secondAttribute="top" constant="9" id="zLb-KA-pmV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EZy-kC-qhJ" firstAttribute="top" secondItem="yOc-FD-wld" secondAttribute="bottom" id="74a-SP-Kb9"/>
+                            <constraint firstItem="RHK-uU-5GO" firstAttribute="leading" secondItem="Zz3-UW-3SX" secondAttribute="leading" id="9yV-h7-qEg"/>
+                            <constraint firstAttribute="trailing" secondItem="RHK-uU-5GO" secondAttribute="trailing" id="DQi-Oa-jFc"/>
+                            <constraint firstItem="5Oe-rQ-XFq" firstAttribute="top" secondItem="EZy-kC-qhJ" secondAttribute="bottom" constant="94" id="G1M-hW-2zr"/>
+                            <constraint firstAttribute="trailing" secondItem="EZy-kC-qhJ" secondAttribute="trailing" id="QlN-3f-jiN"/>
+                            <constraint firstItem="5Oe-rQ-XFq" firstAttribute="top" secondItem="RHK-uU-5GO" secondAttribute="bottom" id="aYX-bL-AFg"/>
+                            <constraint firstItem="EZy-kC-qhJ" firstAttribute="leading" secondItem="Zz3-UW-3SX" secondAttribute="leading" id="t1h-y5-ID2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Camera" id="M9M-kf-bhm"/>
+                    <connections>
+                        <outlet property="imageView" destination="EZy-kC-qhJ" id="UFI-hg-0IJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MyV-G2-NW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147" y="510"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="priroda_gory_nebo_ozero_oblaka_81150_1920x1080" width="1920" height="1080"/>
+    </resources>
 </document>

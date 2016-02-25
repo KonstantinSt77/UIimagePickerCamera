@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		D1FADA2D1C7DF08200B71D09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1FADA2C1C7DF08200B71D09 /* main.m */; };
 		D1FADA301C7DF08200B71D09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1FADA2F1C7DF08200B71D09 /* AppDelegate.m */; };
-		D1FADA331C7DF08200B71D09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1FADA321C7DF08200B71D09 /* ViewController.m */; };
 		D1FADA361C7DF08200B71D09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1FADA341C7DF08200B71D09 /* Main.storyboard */; };
 		D1FADA381C7DF08200B71D09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1FADA371C7DF08200B71D09 /* Assets.xcassets */; };
 		D1FADA3B1C7DF08200B71D09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1FADA391C7DF08200B71D09 /* LaunchScreen.storyboard */; };
 		D1FADA461C7DF08200B71D09 /* Task3CameraPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1FADA451C7DF08200B71D09 /* Task3CameraPickerTests.m */; };
 		D1FADA511C7DF08200B71D09 /* Task3CameraPickerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1FADA501C7DF08200B71D09 /* Task3CameraPickerUITests.m */; };
+		D1FADA5F1C7DF0B600B71D09 /* MyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1FADA5E1C7DF0B600B71D09 /* MyView.xib */; };
+		D1FADA6B1C7E0B2800B71D09 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1FADA6A1C7E0B2800B71D09 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,6 @@
 		D1FADA2C1C7DF08200B71D09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D1FADA2E1C7DF08200B71D09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D1FADA2F1C7DF08200B71D09 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D1FADA311C7DF08200B71D09 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D1FADA321C7DF08200B71D09 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D1FADA351C7DF08200B71D09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1FADA371C7DF08200B71D09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1FADA3A1C7DF08200B71D09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +50,9 @@
 		D1FADA4C1C7DF08200B71D09 /* Task3CameraPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Task3CameraPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1FADA501C7DF08200B71D09 /* Task3CameraPickerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Task3CameraPickerUITests.m; sourceTree = "<group>"; };
 		D1FADA521C7DF08200B71D09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1FADA5E1C7DF0B600B71D09 /* MyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyView.xib; path = ../MyView.xib; sourceTree = "<group>"; };
+		D1FADA691C7E0B2800B71D09 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D1FADA6A1C7E0B2800B71D09 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,9 @@
 			children = (
 				D1FADA2E1C7DF08200B71D09 /* AppDelegate.h */,
 				D1FADA2F1C7DF08200B71D09 /* AppDelegate.m */,
-				D1FADA311C7DF08200B71D09 /* ViewController.h */,
-				D1FADA321C7DF08200B71D09 /* ViewController.m */,
+				D1FADA691C7E0B2800B71D09 /* MainViewController.h */,
+				D1FADA6A1C7E0B2800B71D09 /* MainViewController.m */,
+				D1FADA5E1C7DF0B600B71D09 /* MyView.xib */,
 				D1FADA341C7DF08200B71D09 /* Main.storyboard */,
 				D1FADA371C7DF08200B71D09 /* Assets.xcassets */,
 				D1FADA391C7DF08200B71D09 /* LaunchScreen.storyboard */,
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1FADA3B1C7DF08200B71D09 /* LaunchScreen.storyboard in Resources */,
+				D1FADA5F1C7DF0B600B71D09 /* MyView.xib in Resources */,
 				D1FADA381C7DF08200B71D09 /* Assets.xcassets in Resources */,
 				D1FADA361C7DF08200B71D09 /* Main.storyboard in Resources */,
 			);
@@ -273,8 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1FADA331C7DF08200B71D09 /* ViewController.m in Sources */,
 				D1FADA301C7DF08200B71D09 /* AppDelegate.m in Sources */,
+				D1FADA6B1C7E0B2800B71D09 /* MainViewController.m in Sources */,
 				D1FADA2D1C7DF08200B71D09 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,9 +421,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Task3CameraPicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jelvix.Task3CameraPicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -428,9 +434,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Task3CameraPicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jelvix.Task3CameraPicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
