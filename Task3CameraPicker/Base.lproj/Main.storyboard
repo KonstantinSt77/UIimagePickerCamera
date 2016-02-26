@@ -90,7 +90,6 @@
                     <navigationItem key="navigationItem" title="Camera" id="M9M-kf-bhm"/>
                     <connections>
                         <outlet property="imageView" destination="EZy-kC-qhJ" id="UFI-hg-0IJ"/>
-                        <outlet property="myViewController" destination="EZy-kC-qhJ" id="sVg-FN-uTx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyV-G2-NW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
