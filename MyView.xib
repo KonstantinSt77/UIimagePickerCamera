@@ -14,22 +14,34 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iEr-wa-d9b">
                     <rect key="frame" x="0.0" y="480" width="320" height="88"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbo-bq-xLO">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbo-bq-xLO">
                             <rect key="frame" x="47" y="25" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="UMz-Ho-3Av"/>
+                                <constraint firstAttribute="height" constant="40" id="jJg-bt-gyU"/>
+                            </constraints>
                             <state key="normal" image="Flash On-100"/>
                             <connections>
                                 <action selector="useFlash" destination="8wt-c7-cRo" eventType="touchUpInside" id="hSq-er-7RM"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI5-Ns-ujt">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI5-Ns-ujt">
                             <rect key="frame" x="129" y="13" width="63" height="63"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="63" id="1fV-QA-OZ8"/>
+                                <constraint firstAttribute="width" constant="63" id="Nns-bV-KOK"/>
+                            </constraints>
                             <state key="normal" image="Circle Thin-96"/>
                             <connections>
                                 <action selector="takePhotoPressed:" destination="8wt-c7-cRo" eventType="touchUpInside" id="ST4-sK-noc"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CF-hc-Dfs">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CF-hc-Dfs">
                             <rect key="frame" x="232" y="25" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="I3N-8z-yHU"/>
+                                <constraint firstAttribute="height" constant="40" id="Qco-DN-rdI"/>
+                            </constraints>
                             <state key="normal" image="Switch Camera-100"/>
                             <connections>
                                 <action selector="changeCamera" destination="8wt-c7-cRo" eventType="touchUpInside" id="Qzb-Ua-hFc"/>
@@ -38,6 +50,12 @@
                     </subviews>
                     <color key="backgroundColor" red="0.1277844551" green="0.1277844551" blue="0.1277844551" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstItem="Xbo-bq-xLO" firstAttribute="top" secondItem="iEr-wa-d9b" secondAttribute="top" constant="25" id="1fT-bP-Z5e"/>
+                        <constraint firstItem="WI5-Ns-ujt" firstAttribute="top" secondItem="iEr-wa-d9b" secondAttribute="top" constant="13" id="3GT-BI-CVA"/>
+                        <constraint firstItem="Xbo-bq-xLO" firstAttribute="centerX" secondItem="iEr-wa-d9b" secondAttribute="centerX" constant="-93" id="GeQ-jN-Olz"/>
+                        <constraint firstItem="WI5-Ns-ujt" firstAttribute="centerX" secondItem="iEr-wa-d9b" secondAttribute="centerX" id="Hfy-Mx-39g"/>
+                        <constraint firstItem="9CF-hc-Dfs" firstAttribute="top" secondItem="iEr-wa-d9b" secondAttribute="top" constant="25" id="kTk-CF-GtI"/>
+                        <constraint firstItem="9CF-hc-Dfs" firstAttribute="centerX" secondItem="iEr-wa-d9b" secondAttribute="centerX" constant="92" id="om6-RD-tgQ"/>
                         <constraint firstAttribute="height" constant="88" id="xbK-Sj-T2e"/>
                     </constraints>
                 </view>

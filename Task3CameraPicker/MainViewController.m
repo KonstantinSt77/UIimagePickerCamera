@@ -64,12 +64,32 @@
 }
 
 -(void)changeCamera{
-
+    if (self.imagePickerController.cameraDevice == UIImagePickerControllerCameraDeviceRear) {
+        
+        self.imagePickerController.cameraDevice == UIImagePickerControllerCameraDeviceFront;
+    }
+    else
+    {
+        self.imagePickerController.cameraDevice == UIImagePickerControllerCameraDeviceRear;
+    }
 
 }
--(void)useFlash{
-
-
+-(void)useFlash
+{
+    if (self.imagePickerController.cameraFlashMode == UIImagePickerControllerCameraFlashModeOn) {
+    
+        self.imagePickerController.cameraFlashMode = UIImagePickerControllerCameraFlashModeOff;
+    }
+    else if (self.imagePickerController.cameraFlashMode == UIImagePickerControllerCameraFlashModeOff)
+    {
+    self.imagePickerController.cameraFlashMode = UIImagePickerControllerCameraFlashModeOn;
+    }
+//    else if (self.imagePickerController.cameraFlashMode == UIImagePickerControllerCameraFlashModeOff)
+//    {
+//        
+//       self.imagePickerController.cameraFlashMode = UIImagePickerControllerCameraFlashModeAuto;
+//    }
+  
 }
 
 

@@ -38,6 +38,8 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"MyCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"MyCollectionViewCell"];
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    
+    //self.collectionView.backgroundView.alpha = 0.0;
     [self.collectionView setCollectionViewLayout:flowLayout];
 
 }
